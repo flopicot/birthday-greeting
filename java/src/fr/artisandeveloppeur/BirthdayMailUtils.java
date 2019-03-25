@@ -7,7 +7,7 @@ import java.util.Collection;
 /**
  * Regroupe les méthodes utilitaires des mails d'anniversaire
  */
-public class BirthdayMailHelper {
+public class BirthdayMailUtils {
 	
 	public static final String JOYEUX_ANNIVERSAIRE_TITLE = "Joyeux Anniversaire !";
 	
@@ -17,7 +17,7 @@ public class BirthdayMailHelper {
 	public static void sendBirthdayMail(Collection<Employee> employees) {
 		for (Employee employee : employees) {
 			if (employee.isMybirtday()) {
-				BirthdayMailHelper.sendEmail(employee);
+				sendEmail(employee);
 			}
 		}
 	}

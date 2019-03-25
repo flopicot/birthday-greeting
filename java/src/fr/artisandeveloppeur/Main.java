@@ -17,7 +17,7 @@ public class Main {
         try {
             System.out.println("Batch job started.");
             EmployeeFileParser employeeFileParser = new EmployeeFileParser(Paths.get(".",FILE_NAME));
-            BirthdayMailHelper.sendBirthdayMail(employeeFileParser.retrieveData());
+            BirthdayMailUtils.sendBirthdayMail(employeeFileParser.retrieveData());
             System.out.println("Batch job done.");
         } catch (IOException ex) {
             System.out.println("Unable to open file '" + FILE_NAME + "'");
